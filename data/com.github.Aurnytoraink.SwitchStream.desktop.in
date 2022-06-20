@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=switchstream
+Exec=switchstream
+Icon=com.github.Aurnytoraink.SwitchStream
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true

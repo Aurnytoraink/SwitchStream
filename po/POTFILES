@@ -1,0 +1,7 @@
+data/com.github.Aurnytoraink.SwitchStream.desktop.in
+data/com.github.Aurnytoraink.SwitchStream.appdata.xml.in
+data/com.github.Aurnytoraink.SwitchStream.gschema.xml
+src/window.ui
+src/main.py
+src/window.py
+

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="switchstream">
+	<schema id="com.github.Aurnytoraink.SwitchStream" path="/com/github/Aurnytoraink/SwitchStream/">
+	</schema>
+</schemalist>
