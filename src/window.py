@@ -22,7 +22,8 @@ from gi.repository import Gtk
 class SwitchstreamWindow(Gtk.ApplicationWindow):
     __gtype_name__ = 'SwitchstreamWindow'
 
-    label = Gtk.Template.Child()
+    ip_entry = Gtk.Template.Child()
+    btn_connect = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)

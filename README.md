@@ -10,7 +10,7 @@
 
 ## 🧪 Features (TODO)
 
-- [ ] 
+- This app is a linux version of [SkyNX](https://github.com/DevL0rd/SkyNX/)
 
 ## 🏗️ Building from source
 

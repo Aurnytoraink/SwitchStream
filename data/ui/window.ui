@@ -3,29 +3,101 @@
   <requires lib="gtk" version="4.0"/>
   <requires lib="adw" version="1.0"/>
   <template class="SwitchstreamWindow" parent="GtkApplicationWindow">
-    <property name="default-width">600</property>
-    <property name="default-height">300</property>
+    <property name="default-width">450</property>
+    <property name="default-height">600</property>
     <child type="titlebar">
-      <object class="GtkHeaderBar" id="header_bar">
-        <child type="end">
-          <object class="GtkMenuButton">
-            <property name="icon-name">open-menu-symbolic</property>
-            <property name="menu-model">primary_menu</property>
+      <object class="GtkRevealer">
+        <property name="transition-type">GTK_REVEALER_TRANSITION_TYPE_CROSSFADE</property>
+        <property name="reveal-child">True</property>
+        <property name="child">
+          <object class="GtkHeaderBar" id="header_bar">
+            <property name="title-widget">
+              <object class="AdwBin">
+              </object>
+            </property>
+            <child type="end">
+              <object class="GtkMenuButton">
+                <property name="icon-name">open-menu-symbolic</property>
+                <property name="menu-model">primary_menu</property>
+              </object>
+            </child>
+            <style>
+              <class name="flat"/>
+            </style>
+          </object>
+        </property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkStack" id="stack">
+        <child>
+          <object class="GtkStackPage">
+            <property name="name">setup</property>
+            <property name="child">
+              <object class="AdwStatusPage">
+                <property name="icon-name">com.github.Aurnytoraink.SwitchStream</property>
+                <property name="title" translatable="yes">Connect your Nintendo Switch</property>
+                <property name="child">
+                  <object class="GtkBox">
+                    <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
+                    <property name="spacing">10</property>
+                    <property name="halign">GTK_ALIGN_CENTER</property>
+                    <child>
+                      <object class="GtkEntry" id="ip_entry">
+                        <property name="placeholder-text" translatable="yes">IP address</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="btn_connect">
+                        <property name="label" translatable="yes">Connect</property>
+                        <style>
+                          <class name="pill"/>
+                        </style>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+              </object>
+            </property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkStackPage">
+            <property name="name">portal-validator</property>
+            <property name="child">
+              <object class="AdwStatusPage">
+                <property name="icon-name">screen-shared-symbolic</property>
+                <property name="title" translatable="yes">Allow screensharing</property>
+                <property name="description" translatable="yes">Select your screen in order to stream it to your Nintendo Switch</property>
+              </object>
+            </property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkStackPage">
+            <property name="name">connected</property>
+            <property name="child">
+              <object class="AdwStatusPage">
+                <property name="icon-name">com.github.Aurnytoraink.SwitchStream</property>
+                <property name="title" translatable="yes">Connected !</property>
+                <property name="description" translatable="yes">Connected to 255.255.255.255</property>
+                <property name="child">
+                  <object class="GtkButton" id="btn_disconnect">
+                    <property name="label" translatable="yes">Disconnect</property>
+                    <property name="halign">GTK_ALIGN_CENTER</property>
+                    <style>
+                      <class name="pill"/>
+                      <class name="destructive-action"/>
+                    </style>
+                  </object>
+                </property>
+              </object>
+            </property>
           </object>
         </child>
       </object>
     </child>
-    <child>
-      <object class="GtkLabel" id="label">
-        <property name="label">Hello, World!</property>
-        <attributes>
-          <attribute name="weight" value="bold"/>
-          <attribute name="scale" value="2"/>
-        </attributes>
-      </object>
-    </child>
   </template>
-
   <menu id="primary_menu">
     <section>
       <item>
@@ -43,3 +115,4 @@
     </section>
   </menu>
 </interface>
+
