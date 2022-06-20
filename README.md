@@ -1,7 +1,6 @@
 <h1 align="center">
   <img src="data/icons/hicolor/scalable/apps/com.github.Aurnytoraink.SwitchStream.svg" alt="SwitchStream" width="192" height="192"/><br>
-  <p style="font-size: small;">(I need a icon)</p>
-  Abacus
+  SwitchStream
 </h1>
 
 <p align="center"><strong>Stream your PC games on your Nintendo Switch</strong></p>
@@ -10,7 +9,7 @@
 
 ## 🧪 Features (TODO)
 
-- This app is a linux version of [SkyNX](https://github.com/DevL0rd/SkyNX/)
+- This app is compatible with [SkyNX](https://github.com/DevL0rd/SkyNX/)
 
 ## 🏗️ Building from source
 
